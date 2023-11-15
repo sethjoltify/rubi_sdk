@@ -5,7 +5,6 @@
 /.data/
 /coverage/
 /__tests__/env.js
-/dist/
 /cache/
 /scripts/node.log
 stats.json
