@@ -1,0 +1,14 @@
+.idea
+/node_modules/
+/.env
+/yarn-error.log
+/.data/
+/coverage/
+/__tests__/env.js
+/lib/
+/dist/
+/cache/
+/scripts/node.log
+stats.json
+.DS_Store
+/docs/
