@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 
-module.exports = function(env, argv) {
+module.exports = function (env, argv) {
     const isProduction = argv.mode === 'production';
     return {
         entry: './src/index.ts',
@@ -14,11 +14,11 @@ module.exports = function(env, argv) {
                         {
                             loader: require.resolve('ts-loader'),
                             options: {
-                                compiler: 'ts-patch/compiler',
-                            },
-                        },
-                    ], 
-                    exclude: ['/node_modules', '/lib'],
+                                compiler: 'ts-patch/compiler'
+                            }
+                        }
+                    ],
+                    exclude: ['/node_modules', '/lib']
                 },
                 {
                     test: /\.m?js/,
@@ -32,8 +32,8 @@ module.exports = function(env, argv) {
             new webpack.IgnorePlugin({
                 checkResource(resource) {
                     // "@ethereumjs/common/genesisStates" consists ~800KB static files which are no more needed
-                    return /(.*\/genesisStates\/.*\.json)/.test(resource)
-                },
+                    return /(.*\/genesisStates\/.*\.json)/.test(resource);
+                }
             }),
             new webpack.ProvidePlugin({
                 Buffer: ['buffer', 'Buffer'],
@@ -42,29 +42,32 @@ module.exports = function(env, argv) {
             new webpack.SourceMapDevToolPlugin({
                 test: [/\.ts$/],
                 exclude: 'vendor',
-                filename: "app.[hash].js.map",
-                append: "//# sourceMappingURL=[url]",
+                filename: 'app.[hash].js.map',
+                append: '//# sourceMappingURL=[url]',
                 moduleFilenameTemplate: '[resource-path]',
-                fallbackModuleFilenameTemplate: '[resource-path]',
-            }),
+                fallbackModuleFilenameTemplate: '[resource-path]'
+            })
         ],
         resolve: {
             extensions: ['.ts', '.js'],
             alias: {
-                "src": path.resolve(__dirname, 'src'),
+                src: path.resolve(__dirname, 'src'),
                 // To avoid blotting up the `bn.js` library all over the packages
                 // use single library instance.
-                "bn.js": path.resolve(__dirname, 'node_modules/bn.js')
-            }, 
+                'bn.js': path.resolve(__dirname, 'node_modules/bn.js')
+            },
             fallback: {
-                "path": false,
-                "os": false,
-                "url": require.resolve("url"),
-                "http": require.resolve("http-browserify"),
-                "https": require.resolve("https-browserify"),
-                "stream": require.resolve("stream-browserify"),
-                "crypto": require.resolve("crypto-browserify"),
-                "querystring": require.resolve('querystring-es3')
+                fs: false,
+                constants: false,
+                querystring: false,
+                url: false,
+                path: false,
+                os: false,
+                http: require.resolve('http-browserify'),
+                https: require.resolve('https-browserify'),
+                zlib: false,
+                stream: require.resolve('stream-browserify'),
+                crypto: require.resolve('crypto-browserify')
             }
         },
         output: {
@@ -79,6 +82,6 @@ module.exports = function(env, argv) {
         //     })],
         // },
         devtool: 'source-map',
-        mode: 'development',
-    }
+        mode: 'development'
+    };
 };
