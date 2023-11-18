@@ -1,10 +1,10 @@
-import { PriceToken, PriceTokenAmount } from '../../../../../common/tokens';
-import { BlockchainName, EvmBlockchainName } from '../../../../../core/blockchain/models/blockchain-name';
-import { RequiredCrossChainOptions } from '../../models/cross-chain-options';
-import { CbridgeCrossChainSupportedBlockchain } from '../cbridge/constants/cbridge-supported-blockchains';
-import { CrossChainProvider } from '../common/cross-chain-provider';
-import { CalculationResult } from '../common/models/calculation-result';
-import { FeeInfo } from '../common/models/fee-info';
+import { PriceToken, PriceTokenAmount } from "../../../../../common/tokens";
+import { BlockchainName, EvmBlockchainName } from "../../../../../core/blockchain/models/blockchain-name";
+import { RequiredCrossChainOptions } from "../../models/cross-chain-options";
+import { CbridgeCrossChainSupportedBlockchain } from "../cbridge/constants/cbridge-supported-blockchains";
+import { CrossChainProvider } from "../common/cross-chain-provider";
+import { CalculationResult } from "../common/models/calculation-result";
+import { FeeInfo } from "../common/models/fee-info";
 import { TaikoBridgeSupportedBlockchain } from './models/taiko-bridge-supported-blockchains';
 export declare class TaikoBridgeProvider extends CrossChainProvider {
     readonly type: "taiko_bridge";

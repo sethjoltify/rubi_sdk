@@ -1,4 +1,4 @@
-import { TokenAmount } from '../../../../../../common/tokens';
+import { TokenAmount } from "../../../../../../common/tokens";
 export interface OnChainPlatformFee {
     percent: number;
     token: TokenAmount;

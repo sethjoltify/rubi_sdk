@@ -1,15 +1,15 @@
 import BigNumber from 'bignumber.js';
-import { PriceTokenAmount } from '../../../../../common/tokens';
-import { EvmBlockchainName } from '../../../../../core/blockchain/models/blockchain-name';
-import { ContractParams } from '../../../../common/models/contract-params';
-import { SwapTransactionOptions } from '../../../../common/models/swap-transaction-options';
-import { EvmCrossChainTrade } from '../common/emv-cross-chain-trade/evm-cross-chain-trade';
-import { GasData } from '../common/emv-cross-chain-trade/models/gas-data';
-import { FeeInfo } from '../common/models/fee-info';
-import { GetContractParamsOptions } from '../common/models/get-contract-params-options';
-import { OnChainSubtype } from '../common/models/on-chain-subtype';
-import { TradeInfo } from '../common/models/trade-info';
-import { EvmOnChainTrade } from '../../../../on-chain/calculation-manager/providers/common/on-chain-trade/evm-on-chain-trade/evm-on-chain-trade';
+import { PriceTokenAmount } from "../../../../../common/tokens";
+import { EvmBlockchainName } from "../../../../../core/blockchain/models/blockchain-name";
+import { ContractParams } from "../../../../common/models/contract-params";
+import { SwapTransactionOptions } from "../../../../common/models/swap-transaction-options";
+import { EvmCrossChainTrade } from "../common/emv-cross-chain-trade/evm-cross-chain-trade";
+import { GasData } from "../common/emv-cross-chain-trade/models/gas-data";
+import { FeeInfo } from "../common/models/fee-info";
+import { GetContractParamsOptions } from "../common/models/get-contract-params-options";
+import { OnChainSubtype } from "../common/models/on-chain-subtype";
+import { TradeInfo } from "../common/models/trade-info";
+import { EvmOnChainTrade } from "../../../../on-chain/calculation-manager/providers/common/on-chain-trade/evm-on-chain-trade/evm-on-chain-trade";
 export declare class CbridgeCrossChainTrade extends EvmCrossChainTrade {
     /** @internal */
     static getGasData(from: PriceTokenAmount<EvmBlockchainName>, to: PriceTokenAmount<EvmBlockchainName>, onChainTrade?: EvmOnChainTrade | null): Promise<GasData | null>;

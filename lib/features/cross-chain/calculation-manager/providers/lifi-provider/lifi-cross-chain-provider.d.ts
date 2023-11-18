@@ -1,10 +1,10 @@
-import { PriceToken, PriceTokenAmount } from '../../../../../common/tokens';
-import { BlockchainName, EvmBlockchainName } from '../../../../../core/blockchain/models/blockchain-name';
-import { RequiredCrossChainOptions } from '../../models/cross-chain-options';
-import { CrossChainProvider } from '../common/cross-chain-provider';
-import { CalculationResult } from '../common/models/calculation-result';
-import { FeeInfo } from '../common/models/fee-info';
-import { LifiCrossChainSupportedBlockchain } from './constants/lifi-cross-chain-supported-blockchain';
+import { PriceToken, PriceTokenAmount } from "../../../../../common/tokens";
+import { BlockchainName, EvmBlockchainName } from "../../../../../core/blockchain/models/blockchain-name";
+import { RequiredCrossChainOptions } from "../../models/cross-chain-options";
+import { CrossChainProvider } from "../common/cross-chain-provider";
+import { CalculationResult } from "../common/models/calculation-result";
+import { FeeInfo } from "../common/models/fee-info";
+import { LifiCrossChainSupportedBlockchain } from "./constants/lifi-cross-chain-supported-blockchain";
 export declare class LifiCrossChainProvider extends CrossChainProvider {
     readonly type: "lifi";
     private readonly lifi;
