@@ -1,4 +1,4 @@
-import { SymbiosisToken, SymbiosisTokenAmount } from './symbiosis-trade-data';
+import { SymbiosisToken, SymbiosisTokenAmount } from "./symbiosis-trade-data";
 export type SwappingParams = {
     tokenAmountIn: SymbiosisTokenAmount;
     tokenOut: SymbiosisToken;
