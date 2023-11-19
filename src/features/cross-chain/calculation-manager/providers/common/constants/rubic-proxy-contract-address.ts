@@ -15,7 +15,7 @@ export const rubicProxyContractAddress: Record<
             router = '0x9C57699576725ce531C4878DBe0E053B2f4A3619';
         }
         if (blockchain === BLOCKCHAIN_NAME.BINANCE_SMART_CHAIN) {
-            gateway = '0xf68Fac18031f2E205DF61d2299e3215132e43c4e';
+            gateway = '0x7df26f8ad4195da3ffa7e4d888c4a13b2e4708ce';
             router = '0x9C57699576725ce531C4878DBe0E053B2f4A3619';
         }
         if (blockchain === BLOCKCHAIN_NAME.TELOS) {
