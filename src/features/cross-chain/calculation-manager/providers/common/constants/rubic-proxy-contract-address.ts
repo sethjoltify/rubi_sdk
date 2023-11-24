@@ -18,6 +18,10 @@ export const rubicProxyContractAddress: Record<
             gateway = '0x7df26f8ad4195da3ffa7e4d888c4a13b2e4708ce';
             router = '0x9C57699576725ce531C4878DBe0E053B2f4A3619';
         }
+        if (blockchain === BLOCKCHAIN_NAME.ARBITRUM) {
+            gateway = '0x578aAcb6457FA106196D24A97EA7d65Afb4286a6';
+            router = '0x31655f1CC5D8167694032b21E59C96CbbDDA7316';
+        }
         if (blockchain === BLOCKCHAIN_NAME.TELOS) {
             router = '0xA2d8CF32C16f070702c45a5686Fdb0a1d7171AAD';
         }
